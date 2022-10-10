@@ -1,4 +1,4 @@
-# Lets_Code_by_Ada_pg_estatica_projeto_individual
+<h1>Lets_Code_by_Ada_pg_estatica_projeto_individual</h1>
 
 Este foi o primeiro projeto do primeiro módulo do curso de <strong>Desenvolvimento Front-End da Let's Code by Ada em parceria com a Oi</strong>.<br>
 Na construção desta página pude exercitar a aplicação de vários conhecimentos adquiridos ao londo do módulo, como: <br>
@@ -9,7 +9,7 @@ Na construção desta página pude exercitar a aplicação de vários conhecimen
 - e muito mais.
 
 <br>
-![Captura de tela de 2022-10-10 15-23-07](https://user-images.githubusercontent.com/59850893/194932301-c9eacd90-ea3f-4405-8607-d163e1c202d4.png)
+![Imagem da tela](https://user-images.githubusercontent.com/59850893/194932301-c9eacd90-ea3f-4405-8607-d163e1c202d4.png)
 <br>
 [Gravação de tela de 10-10-2022 15:23:49.webm](https://user-images.githubusercontent.com/59850893/194932375-8e167c9e-7278-4f7f-ac3a-4ce6223494a6.webm)
 <br>

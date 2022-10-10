@@ -1,0 +1,315 @@
+:root{
+  --tamanho-main: calc(100% - 400px);
+  --cinza: rgba(238, 238, 238, 0.562);
+  --cinza-hover: rgba(238, 238, 238, 0.89);
+  --cinza-medio: #c5c5c5c7;
+  --cinza-escuro: #3f3f3f;
+  --cinza-button: #a7a4a4;
+  --laranja: rgb(214, 117, 25);
+  --laranja-hover: rgb(184, 108, 37);
+  --branco: #eee;
+}
+
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body{
+  max-width: 70vw;
+  background-color: #eee;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 100px var(--tamanho-main) 100px;
+  grid-template-areas: 
+    "header header header"
+    "main main nav"
+    "main main aside"
+    "footer footer footer"
+  ;
+}
+
+header{
+  background-image: url(./imagens/ondas-transparente.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  grid-area: header;
+}
+header img{
+  width: 200px;
+  height: 200px;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 50px;
+}
+.menu a{
+  text-decoration: none;
+  background-color: var(--cinza);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--laranja);
+  font-size: 18px;
+}
+.menu a:hover{
+  background-color: var(--cinza-hover);
+  color: var(--laranja-hover);
+}
+
+nav{
+  margin: 15px 15px;
+  grid-area: nav;
+  display: flex;
+  justify-content: right;
+}
+#divBusca{
+  border:solid 2px var(--cinza-escuro);
+  border-radius:10px;
+  width:300px;
+  height:32px;
+  display: flex;
+  justify-content: flex-end;
+}
+#txtBusca{
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+}
+#btnBusca{
+  border:none;
+  height:32px;
+  border-radius:0 7px 7px 0;
+  width:70px;
+  font-weight:bold;
+  background:var(--cinza-escuro);
+  color: var(--branco);
+}
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+}
+
+aside{
+  grid-area: aside;
+}
+aside ul{
+  list-style: none;
+  margin-top: 0;
+}
+#cards-title{
+  color: #3f3f3f;
+  text-align: right;
+  margin: 4px 17px;
+  font-size: 30px;
+}
+.card {
+  background-color: var(--cinza-medio);
+  border-radius: 5px;
+  padding: 5px 15px 20px;
+  margin: 10px;
+}
+.card h3{
+  background-color: var(--branco);
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px
+}
+.card div{
+  display: flex;
+  justify-content: space-between;
+}
+.card p:nth-child(2){
+  color: var(--cinza-escuro);
+  font-style: italic;
+  font-weight: bold;
+}
+.saiba-mais-button{
+  background: var(--cinza-button);
+  color: var(--branco);
+  border: 1px solid var(--branco);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px var(--branco);
+  text-shadow: none;
+  padding: 5px 7px;
+  font-size: 16px;
+}
+.saiba-mais-button:hover {
+background: var(--laranja-hover);
+color: var(--branco);
+border: 1px solid var(--branco);
+border-radius: 20px;
+box-shadow: 5px 5px 5px var(--branco);
+text-shadow: none;
+}
+.redes{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 45px 0px;
+}
+.rede-icon{
+  width: 50px;
+  height: auto;
+}
+
+main{
+  grid-area: main;
+}
+main h1{
+  color: var(--laranja);
+  font-size: 3vw;
+  text-align: center;
+  margin: 0;
+  padding: 20px 50px;
+}
+.galeria{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+  align-items: center;
+}
+.galeria img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 150px;
+  height: 100px;
+  padding: 12px;
+  background-color: var(--laranja);
+  border-radius: 5px;
+  /* box-shadow: 2px 2px var(--cinza-medio); */
+  box-shadow: 0px 10px 10px rgba(0,0,0,.15);
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+}
+.container:hover{
+  transform: scale(1.05);
+  box-shadow: 0px 10px 10px rgba(0,0,0,.15);
+}
+.container figcaption {
+  position: absolute;
+  top: 11px;
+  right: 19px;
+  font-size: 20px;
+  color: var(--branco);
+  text-shadow: 0px 0px 5px black;
+}
+.card-conexoes{
+  display: flex;
+  margin-bottom: 20px;
+}
+.card-conexoes img{
+  width: 260px;
+  height: 180px;
+}
+.texto-conexoes{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+footer{
+  background-color: var(--cinza-escuro);
+  grid-area: footer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; 
+}
+.links-footer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50vw;
+}
+.links-footer a{
+  color: var(--branco);
+  font-size: 12px;
+}
+.links-footer a:hover{
+  color: var(--laranja-hover);
+}
+.contato{
+  color: var(--branco);
+  font-size: 12px;
+  margin-left: 50px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contato p{
+  margin: 0px;
+}
+#code{
+  color: var(--branco);
+  font-size: 10px;
+  text-align: right;
+  margin: 0px 5px 5px 5px;
+  position: relative;
+  top: 35px;
+}
+
+@media (max-width:768px) {
+  html, body {
+    min-height: 100%;
+  }
+  body{
+    margin: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 100px calc(100% - 1300px) 800px 100px;
+    grid-template-areas: 
+      "header "
+      "nav"
+      "main"
+      "aside"
+      "footer"
+    ;
+  }
+  .menu{
+    margin-left: 0;
+  }
+  main{
+    padding: 20px;
+  }
+  main h1 {
+    font-size: 7vw;
+  }
+  aside{
+    margin: 0 auto;
+    width: 100vw;
+  }
+  aside ul {
+    padding: 0 30px;
+  }
+  #cards-title {
+    margin: 4px 41px;
+  }
+}
+
+@media (max-width:500px){
+  .menu{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  header{
+    justify-content: space-around;
+  }
+}
